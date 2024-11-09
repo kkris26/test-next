@@ -6,7 +6,7 @@ position: fixed;
 top: 0;
 left: 0;
 width: 100vw;
-padding: 1em 2em;
+padding: 1em 4em;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -156,7 +156,7 @@ z-index: 999;
 
 /* Ketika menu terbuka (X) */
 .menu-icon.open span:nth-child(1) {
-  transform: rotate(15deg); /* Garis pertama berputar */
+  transform: rotate(10deg); /* Garis pertama berputar */
   top: 50%; /* Menempatkan garis pertama di tengah */
   left: 0;
   width: 100%;
@@ -164,7 +164,7 @@ z-index: 999;
 }
 
 .menu-icon.open span:nth-child(2) {
-  transform: rotate(-15deg); /* Garis kedua berputar */
+  transform: rotate(-10deg); /* Garis kedua berputar */
   bottom: 50%; /* Menempatkan garis kedua di tengah */
   left: 0;
   width: 100%;
