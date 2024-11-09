@@ -1,56 +1,115 @@
-import { Socials } from '@/constants'
-import Image from 'next/image'
-import Link from 'next/link'  // Import Link from next/link
-import React from 'react'
+"use client";
+
+import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import gsap from 'gsap';
+import "./navbar.css";
+
+const navLinks = [
+  { path: "/", label: "Home" },
+  { path: "/about", label: "About" },
+  { path: "/gallery", label: "Gallery" },
+  { path: "/contact", label: "Contact" },
+  { path: "/video", label: "Video" },
+];
 
 const Navbar = () => {
+  const container = useRef<HTMLDivElement | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const tl = useRef<gsap.core.Timeline | null>(null);
+
+  const togglemenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    gsap.set(".menu-link-item-holder", { y: 75 });
+
+    tl.current = gsap.timeline({ paused: true })
+      .to(".menu-overlay", {
+        duration: 1,
+        clipPath: "circle(141.4% at 100% 0)",
+        ease: "power4.inOut",
+      })
+      .to(".menu-link-item-holder", {
+        y: 0,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: "power4.inOut",
+        delay: -0.75,
+      });
+  }, []);
+
+  useEffect(() => {
+    if (tl.current) {
+      if (isMenuOpen) {
+        tl.current.play();
+      } else {
+        tl.current.reverse();
+      }
+    }
+  }, [isMenuOpen]);
+
   return (
-    <div className='w-full fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10'>
-      <div className='w-full h-full flex flex-row items-center justify-between m-auto px-[10px]'>
-        <Link href="/" passHref> {/* Use Link for navigation */}
-          <div className='h-auto w-auto flex flex-row items-center'>
+    <div className='menu-container' ref={container}>
+      <div className='menu-bar'>
+        <div className="book-now">
+          <a href="https://umasapna.reserveonline.id/book/136" target="_blank" rel="noopener noreferrer">BOOK NOW</a>
+        </div>
+
+        <div className="logo-image">
+          <Link href="/">
             <Image
-              src="/asset/NavLogo.png"
-              alt='logo'
+              src="/logo-test.svg"
+              alt="Logo"
               width={70}
-              height={70}
-              className='cursor-pointer hover:animate-slowspin'
+              height={30}
             />
-            <span className='font-bold ml-[10px] hidden md:block text-gray-300'>
-              Webchain Dev
-            </span>
-          </div>
-        </Link>
-        <div className='w-[500px] h-full flex flex-row items-center justify-between md:mr-20'>
-          <div className='flex items-center justify-between w-full h-auto border border-[#7042f861 bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-white'>
-            <Link href="/" passHref> 
-              <p className='cursor-pointer'> About Me</p> {/* Replaced a with p */}
-            </Link>
-            <Link href="/about" passHref>
-              <p className='cursor-pointer'> Edu</p> {/* Replaced a with p */}
-            </Link>
-            <Link href="/contact" passHref>
-              <p className='cursor-pointer'>Contact</p> {/* Replaced a with p */}
-            </Link>
-            <Link href="/video" passHref>
-              <p className='cursor-pointer'>Video</p> {/* Replaced a with p */}
-            </Link>
+          </Link>
+        </div>
+
+        <div className="menu-open" onClick={togglemenu}>
+          <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`}>
+            <span></span>
+            <span></span>
           </div>
         </div>
-        <div className='flex flex-row gap-5'>
-          {Socials.map((social) => (
-            <Image
-              src={`asset/${social.src}`}
-              alt={social.name}
-              key={social.name}
-              width={24}
-              height={24}
-            />
-          ))}
+      </div>
+
+      <div className='menu-overlay'>
+        <div className="menu-copy">
+          <div className="menu-image">
+          </div>
+          <div className="menu-links">
+            {navLinks.map((link, index) => (
+              <div className="menu-link-item" key={index}>
+                <div className="menu-link-item-holder" onClick={togglemenu}>
+                  <Link href={link.path} className='menu-link'>
+                    {link.label} &#8599;
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="menu-info w-full">
+          <div className="menu-info-row">
+            <a href="">X &#8599;</a>
+            <a href="">Instagram &#8599;</a>
+            <a href="">Linkedin &#8599;</a>
+            <a href="">Youtube &#8599;</a>
+            <a href="">Facebook &#8599;</a>
+          </div>
+          <div className="menu-info-row">
+            <p>info@krisnu.com</p>
+            <p>2344 555 555</p>
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

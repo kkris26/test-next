@@ -1,10 +1,10 @@
 import React from 'react';
-import './contact.css'; // Pastikan untuk mengimpor file CSS
+import './gallery.css'; // Pastikan untuk mengimpor file CSS
 
 function Page() {
   return (
     <div className="background-container">
-      <h1 className="text-center text-7xl text-white">Contact Us</h1>
+      <h1 className="text-center text-7xl text-white">Our Gallery</h1>
     </div>
   );
 }

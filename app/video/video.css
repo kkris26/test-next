@@ -1,0 +1,30 @@
+.video-container {
+    z-index: 5;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Mengatur tinggi kontainer untuk mengisi layar penuh */
+  overflow: hidden; /* Menyembunyikan bagian video yang keluar dari layar */
+}
+iframe{
+    transform: scale(1.12);
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Lebar video mengikuti lebar layar */
+  height: 100%; /* Tinggi video mengikuti tinggi layar */
+  z-index: -1; /* Memastikan video berada di belakang konten */
+  object-fit: cover; /* Menjaga aspek rasio dan menutupi seluruh layar */
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Konten di atas video */
+  color: white;
+  text-align: center;
+}

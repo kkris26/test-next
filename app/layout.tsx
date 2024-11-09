@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-[#030014] overflow-y-scrool overflow-x-hidden`}
+        className={`overflow-y-scrool overflow-x-hidden`}
       > 
       <Navbar/>
         {children}

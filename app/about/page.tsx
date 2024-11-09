@@ -4,7 +4,7 @@ import './about.css'; // Pastikan untuk mengimpor file CSS
 function Page() {
   return (
     <div className="background-container">
-      <h1 className="heading">About Us</h1>
+      <h1 className="text-center text-7xl text-white">About Us</h1>
     </div>
   );
 }
