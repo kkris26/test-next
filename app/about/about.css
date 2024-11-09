@@ -1,0 +1,17 @@
+.background-container {
+  background-image: url('https://cdn.sanity.io/images/jpdj44ow/production/4f2cd245ece40942cb107fdbf9ecaa4f1ebb44e2-1900x1151.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Menambahkan bayangan untuk teks agar lebih terlihat */
+}
