@@ -1,0 +1,14 @@
+.floating-copyright {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Keeps it on top of other elements */
+  cursor: default;
+}

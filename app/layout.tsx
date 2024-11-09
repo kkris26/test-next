@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/main/Navbar";
 import "./globals.css";
+import Copyright from "@/components/main/Copyright";
 
 export const metadata: Metadata = {
   title: "Space Portfolio",
@@ -19,6 +20,7 @@ export default function RootLayout({
       > 
       <Navbar/>
         {children}
+        <Copyright/>
       </body>
     </html>
   );
