@@ -8,7 +8,7 @@ function page() {
             autoPlay
             muted
             loop
-            className='w-full h-full object-cover sticky top-0'>
+            className='w-full h-{100vh} object-cover sticky top-0'>
             <source src="https://cdn.sanity.io/files/jpdj44ow/production/5eb23bcab11a647b7204e1bb65bb2a4936eaa01d.mp4" type="video/mp4" />
         </video>
         <YouTubeEmbed/>

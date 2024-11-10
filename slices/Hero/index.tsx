@@ -16,7 +16,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
   autoPlay
   muted
   loop
-  className="z-[1] w-full h-full object-cover"
+  className="z-[1] w-full h-[100vh] object-cover"
 >
   <source
     src={videoUrl}
