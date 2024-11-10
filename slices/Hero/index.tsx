@@ -27,7 +27,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 
       
       {/* Heading */}
-<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[2] text-white flex flex-col gap-5 text-center">
+<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[2] text-white flex flex-col gap-5 text-center w-[90%]l">
   <PrismicRichText
     field={slice.primary.heading}
     components={{
@@ -38,7 +38,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
   <PrismicRichText
     field={slice.primary.body}
     components={{
-      paragraph: ({ children }) => <p className="text-1xl font-bold text-center">{children}</p>,
+      paragraph: ({ children }) => <p className=" w-[30%]">{children}</p>,
     }}
   />
 </div>
