@@ -1,7 +1,6 @@
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import { SliceZone } from "@prismicio/react";
-import * as prismic from "@prismicio/client";
 import Hero from "@/components/main/Hero";
 
 export default async function Index() {
