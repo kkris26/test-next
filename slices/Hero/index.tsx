@@ -27,7 +27,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 
       
       {/* Heading */}
-<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[2] text-white flex flex-col gap-5">
+<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[2] text-white flex flex-col gap-5 text-center">
   <PrismicRichText
     field={slice.primary.heading}
     components={{
