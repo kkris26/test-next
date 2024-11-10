@@ -216,6 +216,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   hero_image: prismic.ImageField<never>;
+
+  /**
+   * Video Url field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.video_url
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  video_url: prismic.LinkField;
 }
 
 /**

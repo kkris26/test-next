@@ -52,6 +52,13 @@
 				"credits": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"video_url": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
 			}
 		},
 		"items": []

@@ -37,6 +37,16 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "video_url": {
+          "type": "Link",
+          "config": {
+            "label": "Video Url",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null,
+            "allowText": false
+          }
         }
       },
       "items": {}

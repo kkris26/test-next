@@ -54,7 +54,7 @@ const Navbar = () => {
   return (
     <div className='menu-container' ref={container}>
       <div className='menu-bar'>
-        <div className="book-now">
+        <div className="book-now w-40 ">
           <a href="https://umasapna.reserveonline.id/book/136" target="_blank" rel="noopener noreferrer">BOOK NOW</a>
         </div>
 
@@ -69,7 +69,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="menu-open" onClick={togglemenu}>
+        <div className="menu-open w-40 flex justify-end" onClick={togglemenu}>
           <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`}>
             <span></span>
             <span></span>
