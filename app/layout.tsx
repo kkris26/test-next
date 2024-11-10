@@ -7,17 +7,17 @@ import { createClient } from "@/prismicio";
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient(); 
-  const page = await client.getSingle("settings");
+  const settings = await client.getSingle("settings");
   
   return{
-    title: page.data.site_title || "Fallback",
-    description: page.data.meta_description || "Fallback for Description",
+    title: settings.data.site_title || "Fallback",
+    description: settings.data.meta_description || "Fallback for Description",
     icons: {
-      icon: page.data.site_icon.url || "",  // URL untuk site icon
-      shortcut: page.data.site_icon.url || "",  // URL untuk shortcut icon (favicon)
+      icon: settings.data.site_icon.url || "",  // URL untuk site icon
+      shortcut: settings.data.site_icon.url || "",  // URL untuk shortcut icon (favicon)
     },
     openGraph:{
-      images: [page.data.og_image.url || ""]
+      images: [settings.data.og_image.url || ""]
     }
   }
 }

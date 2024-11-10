@@ -1,11 +1,16 @@
-import Hero from '@/components/main/Hero'
+import { createClient } from "@/prismicio";
+import { components } from "@/slices";
+import { SliceZone } from "@prismicio/react";
+import * as prismic from "@prismicio/client";
+import Hero from "@/components/main/Hero";
 
-export default function Home() {
+export default async function Index() {
+  const client = createClient(); 
+  const home = await client.getSingle("homepage");
   return (
-<main className="h-full w-full">
-  <div className="flex flex-col gap-20">
+    <div>
     <Hero/>
-  </div>
-</main>
+    <SliceZone slices={home.data.slices} components={components}/>
+    </div>
   );
 }

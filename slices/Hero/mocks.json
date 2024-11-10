@@ -1,0 +1,59 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "This is Home Page Heading 1",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Description of Hero Section In Home",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"hero_image": {
+				"provider": "imgix",
+				"url": "https://images.unsplash.com/photo-1468413253725-0d5181091126?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxiZWFjaHxlbnwwfHx8fDE3MzEyMDQ3MjV8MA&ixlib=rb-4.0.3&q=85",
+				"alt": "landscape photography of seashore under cumulus clouds",
+				"origin": {
+					"id": "U6t80TWJ1DM",
+					"url": "https://images.unsplash.com/photo-1468413253725-0d5181091126?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxiZWFjaHxlbnwwfHx8fDE3MzEyMDQ3MjV8MA&ixlib=rb-4.0.3&q=85",
+					"width": 5480,
+					"height": 3654
+				},
+				"width": 5480,
+				"height": 3654,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]

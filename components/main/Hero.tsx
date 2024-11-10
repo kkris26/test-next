@@ -17,13 +17,12 @@ const Hero = () => {
       
       {/* Heading */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[2]">
-        <h1 className='pt-15 text-white text-1xl sm:text-5px md:text-7xl text-center'>
+        {/* <h1 className='pt-15 text-white text-1xl sm:text-5px md:text-7xl text-center'>
           A healing village hidden in paradise.
-          </h1>
+          </h1> */}
       </div>
     </div>
   );
 };
 
 export default Hero;
-
