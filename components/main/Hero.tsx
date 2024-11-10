@@ -1,26 +1,39 @@
 import React from 'react';
+import RotatingImage from './RotateImg';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <div className="relative flex flex-col h-full w-full">
-      <video
-        autoPlay
-        muted
-        loop
-        className="z-[1] w-full h-full object-cover"
-      >
-        <source
-          src="https://cdn.sanity.io/files/jpdj44ow/production/5eb23bcab11a647b7204e1bb65bb2a4936eaa01d.mp4"
-          type="video/mp4"
-        />
-      </video>
-      
-      {/* Heading */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[2]">
-        {/* <h1 className='pt-15 text-white text-1xl sm:text-5px md:text-7xl text-center'>
-          A healing village hidden in paradise.
-          </h1> */}
+    <div className=" z-[9]">
+    <div className='relative bg-[#F4F4F2]'>
+        <div className="h-[100vh] container m-auto py-20 flex align-center px-20">
+      <div className="flex container flex-col w-[700px] justify-center">
+  <h2 className="text-7xl leading-tight text-[#838B6F]">Swasti, meaning<br />
+  <span className="text-[#5B604A]">
+    “healing”&nbsp;
+    </span>
+     in Sanskrit…</h2>
+  <div className="text-body mt-10 flex flex-col gap-5">
+
+  <p className="">is a culinary and hospitality project in the heart of Ubud, Bali, striving to become a model for sustainability, nurturing local producers, and protecting our planet. Here, in a sanctuary tucked among the lush gardens and quiet neighborhoods of Ubud, Bali, you can breathe deeply, and reconnect with yourself, and with nature.
+    </p>
+    <p className="]">
+We offer the perfect opportunity to disconnect from the breakneck pace of everyday life, to focus on your health, and enter a state of mindful wellbeing, all while leaving behind a minimal environmental footprint.</p>
+  </div>
       </div>
+     
+      <RotatingImage/>
+</div>
+</div>
+<div className='relative'>
+<Image 
+  src={"/OGImage.jpg"} 
+  alt="image" 
+  width={2000} 
+  height={100}
+/>
+
+</div>
     </div>
   );
 };

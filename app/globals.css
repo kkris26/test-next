@@ -1,12 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap'); */
+
+
+
 
 @font-face {
   font-family: 'TestFont';
   src: url('/fonts/test-font.woff') format('woff');
   font-weight: 100;
   font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.text-body p {
+  font-family: "Lato", sans-serif;
+  color: #898989;
+  letter-spacing: normal;
+  line-height: 24px;
 }
 
 *{
