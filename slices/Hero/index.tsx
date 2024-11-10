@@ -5,21 +5,26 @@ import { Content } from "@prismicio/client";
 export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 
 // Hero component with video sourced from Prismic
+
 const Hero = ({ slice }: HeroProps): JSX.Element => {
+  const videoUrl = (slice.primary.video_link as { url: string }).url;
   return (
+    
+    
     <div className="relative flex flex-col h-full w-full">
-      <video
-        autoPlay
-        muted
-        loop
-        className="z-[1] w-full h-full object-cover"
-      >
-        <source
-          src={slice.primary.video_url?.url || ""}
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
+<video
+  autoPlay
+  muted
+  loop
+  className="z-[1] w-full h-full object-cover"
+>
+  <source
+    src={videoUrl}
+    type="video/mp4"
+  />
+  Your browser does not support the video tag.
+</video>
+
       
       {/* Heading */}
 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[2] text-white flex flex-col gap-5">

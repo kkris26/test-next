@@ -42,9 +42,18 @@
           "type": "Link",
           "config": {
             "label": "Video Url",
-            "placeholder": "",
-            "allowTargetBlank": false,
+            "placeholder": "ADD LINK",
+            "allowTargetBlank": true,
             "select": null,
+            "allowText": true
+          }
+        },
+        "video_link": {
+          "type": "Link",
+          "config": {
+            "label": "Video Link",
+            "placeholder": "",
+            "select": "media",
             "allowText": false
           }
         }

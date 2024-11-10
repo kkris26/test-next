@@ -221,11 +221,21 @@ export interface HeroSliceDefaultPrimary {
    * Video Url field in *Hero → Default → Primary*
    *
    * - **Field Type**: Link
-   * - **Placeholder**: *None*
+   * - **Placeholder**: ADD LINK
    * - **API ID Path**: hero.default.primary.video_url
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   video_url: prismic.LinkField;
+
+  /**
+   * Video Link field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.video_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  video_link: prismic.LinkToMediaField;
 }
 
 /**
